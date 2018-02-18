@@ -1,0 +1,48 @@
+<ion-header>
+    <ion-navbar>
+        <ion-row>
+            <ion-col col-11>
+                <ion-title>Add Task</ion-title>
+            </ion-col>
+            <ion-col col-1>
+                <button style="float: right" class="closeButton" (click)="dismiss()">
+                    <ion-icon name="close"></ion-icon>
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-item>
+        <ion-label color="primary" floating>Objective</ion-label>
+        <ion-textarea autocorrect="on" rows="8" [(ngModel)]="task.objective"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+        <ion-label color="primary" floating>Notes</ion-label>
+        <ion-textarea autocorrect="on" rows="8" [(ngModel)]="task.notes"></ion-textarea>
+
+    </ion-item>
+
+
+
+    <ion-item>
+
+        <ion-row>
+
+            <ion-col col-6>
+                <button ion-button (click)="saveTask()" class="buttonGrid"> Save </button>
+            </ion-col>
+            <ion-col col-6>
+                <button ion-button (click)="dismiss()"> Cancel </button>
+            </ion-col>
+        </ion-row>
+
+
+
+    </ion-item>
+
+
+</ion-content>

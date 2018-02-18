@@ -1,0 +1,30 @@
+.platform-ios .closeButton{
+    float: right;
+    color: red;
+    background: transparent;
+    font-size: 36px;
+    padding: 0px 20px 0px 0px;
+}
+
+.platform-android .closeButton {
+    
+    float: right;
+    background: transparent;
+}
+
+.button{
+    padding: 2px 42px 2px 42px;
+    margin-left: 4px !important;
+}
+
+ion-icon{
+    font-size:30px;
+}
+
+.toolbar-title-md {
+    margin-top:10px;
+    padding: 0 12px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #424242;
+}

@@ -1,17 +1,52 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Time Management</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content>
+  <h2 style="text-align: center">Here is a List of your Tasks </h2>
+
+
+  <ion-item style="text-align: center" *ngIf="this.tasks.length == 0">
+    No Records Found
+  </ion-item>
+
+  <ion-item *ngFor="let item of tasks">
+
+    <ion-card>
+
+      <ion-row>
+        <ion-col>
+          <ion-card-header>
+            {{item.objective}}
+          </ion-card-header>
+          <ion-card-content>
+            {{item.notes}}
+
+          </ion-card-content>
+        </ion-col>
+        <ion-col>
+          <button ion-button (click)="delete(item)" class="deleteButton">
+            <ion-icon style="color: red" name="trash"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+
+
+    </ion-card>
+
+
+
+  </ion-item>
+
+
+
+  <ion-fab bottom right>
+    <button ion-fab (click)="addTask()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+
+  </ion-fab>
+
 </ion-content>
